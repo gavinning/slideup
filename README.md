@@ -1,19 +1,40 @@
-# slideup
+# Slideup
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Setup
+```sh
+npm i slideup
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+Usage
+```vue
+<template>
+<div id="app">
+    <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <span @click="sliderShow" class="slide">Slide Page</span>
+    </div>
+    <slider ref="slider" :closeBtn="true">
+        <div class="test" @click="sliderHide">关闭</div>
+    </slider>
+    <router-view/>
+</div>
+</template>
+<script>
+import Slider from 'slideup'
+
+export default {
+    components: { Slider },
+
+    methods: {
+        sliderShow() {
+            this.$refs.slider.show()
+        },
+
+        sliderHide() {
+            this.$refs.slider.hide()
+        }
+    }
+}
+</script>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

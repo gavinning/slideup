@@ -1,22 +1,38 @@
 {
   "name": "slideup",
   "version": "0.1.0",
-  "private": true,
+  "main": "src/components/Slider.vue",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
-  "dependencies": {
+  "author": "gavinning",
+  "license": "MIT",
+  "keywords": [
+    "slide",
+    "slider",
+    "slideup",
+    "slide-up"
+  ],
+  "bugs": {
+    "url": "https://github.com/gavinning/slideup/issues"
+  },
+  "homepage": "https://github.com/gavinning/slideup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavinning/slideup.git"
+  },
+  "devDependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
-  },
-  "devDependencies": {
+    "vuex": "^3.1.2",
     "@vue/cli-plugin-babel": "^4.2.0",
     "@vue/cli-plugin-router": "^4.2.0",
     "@vue/cli-plugin-vuex": "^4.2.0",
     "@vue/cli-service": "^4.2.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.11"
