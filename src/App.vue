@@ -4,7 +4,13 @@
         <router-link to="/">Home</router-link> |
         <span @click="sliderShow" class="slide">Slide Page</span>
     </div>
-    <slider ref="slider" :closeBtn="true">
+    <slider ref="slider"
+        :closeBtn="true"
+        :open="open"
+        :opened="opened"
+        :close="close"
+        :closed="closed"
+    >
         <div class="test" @click="sliderHide">关闭</div>
     </slider>
     <router-view/>
@@ -23,7 +29,23 @@ export default {
 
         sliderHide() {
             this.$refs.slider.hide()
-        }
+        },
+
+        open() {
+            console.log('slider open')
+        },
+
+        opened() {
+            console.log('slider opened')
+        },
+
+        close() {
+            console.log('slider close')
+        },
+
+        closed() {
+            console.log('slider closed')
+        },
     }
 }
 </script>

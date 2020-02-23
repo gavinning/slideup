@@ -13,6 +13,22 @@ export default {
         closeBtn: {
             type: Boolean,
             default: false
+        },
+        open: {
+            type: Function,
+            default: () => {}
+        },
+        opened: {
+            type: Function,
+            default: () => {}
+        },
+        close: {
+            type: Function,
+            default: () => {}
+        },
+        closed: {
+            type: Function,
+            default: () => {}
         }
     },
 
@@ -27,15 +43,21 @@ export default {
         show() {
             this.display = true
             this.visible = true
+            this.open()
         },
 
         hide() {
             this.display = false
+            this.close()
         },
 
         animateEnd() {
+            if (this.display === true) {
+                this.opened()
+            }
             if (this.display === false) {
                 this.visible = false
+                this.closed()
             }
         }
     }

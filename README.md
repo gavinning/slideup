@@ -5,7 +5,7 @@
 npm i slideup
 ```
 
-Usage
+### Usage
 ```vue
 <template>
 <div id="app">
@@ -38,3 +38,21 @@ export default {
 </script>
 ```
 
+### Event
+```html
+<slider ref="slider"
+    :closeBtn="true"
+    :open="open"
+    :opened="opened"
+    :close="close"
+    :closed="closed"
+>
+    <div class="test" @click="sliderHide">关闭</div>
+</slider>
+```
+
+### Example  
+```sh
+git clone https://github.com/gavinning/slideup.git
+cd slideup && npm i && npm run dev
+```
